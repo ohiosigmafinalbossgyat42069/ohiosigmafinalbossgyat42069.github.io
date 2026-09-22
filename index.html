@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valence Chemistry Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to CC0 Bay</h1>
-    <p>CC0 Bay is a website that distributes user-made files which is completely copyright free under Creative Common 0. User can use the files on CC0 Bay for whatever the fuck they want, without crediting us nor the author. We avocate for freedom against copyright, we want freedom of sharing, distributing and reusing. By uploading your files you agreed to make its copyright status CC0 and that you are allowed to post it here. If you don't like that, don't post here.</p>
-    <img src="image.png" alt="Awesome teto drawing">
-    <figcaption>You should only upload your own files or the one that has CC0 license here or else big Teto would be mad</figcaption>
+
+<div class="container">
+    <h1>🧪 Valence Quiz</h1>
+    
+    <!-- Bước 1: Thiết lập số lượng câu hỏi -->
+    <div id="step-setup" class="step active">
+        <p>Up to how many elements do you wish to memorize?</p>
+        <input type="number" id="element-count" min="1" max="118" value="10">
+        <br>
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Bước 2: Khu vực làm bài Quiz -->
+    <div id="step-quiz" class="step">
+        <div id="question-text"></div>
+        <div id="clue-container"></div>
+        <input type="text" id="answer-input" placeholder="e.g. II IV (separated by space)">
+        <br>
+        <button id="submit-btn" onclick="handleSubmission()">Submit</button>
+        <div id="feedback-msg" class="output-msg"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
